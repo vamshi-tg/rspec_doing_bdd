@@ -1,13 +1,16 @@
 class Cart
-    attr_accessor :items
+    attr_accessor :items, :item_value
 
     @@item_value = {
-        dairy_milk: 5,
-        gooday: 10,
-        bru: 2,
-        icecream: 10
+        apple: 7,
+        mango: 10,
+        watermelon: 2,
+        orange: 4
     }
-
+    def self.item_value=(item_value)
+        @@item_value = item_value
+    end
+    
     def initialize
         @items = {}
         @total = 0

@@ -3,6 +3,12 @@ require_relative '../lib/cart.rb'
 describe "An instance of", Cart do
     before :each do
         @cart = Cart.new
+        Cart.item_value = {
+            dairy_milk: 5,
+            gooday: 10,
+            bru: 2,
+            icecream: 10
+        }
     end
 
     it "should be properly initialize" do
